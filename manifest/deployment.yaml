@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: holamundo-nginx
+  name: helloworld
   labels:
-    app: holamundo-nginx
+    app: helloworld
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: holamundo-nginx
+      app: helloworld
   template:
     metadata:
       labels:
-        app: holamundo-nginx
+        app: helloworld
     spec:
       containers:
-      - name: nginx
-        image: tu_usuario/holamundo-nginx:latest
+      - name: helloworld
+        image: cronosdevs/holamundo-nginx:latest
         ports:
         - containerPort: 80

@@ -13,6 +13,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: holamundo-nginx
+            name: helloworld
             port:
               number: 80
