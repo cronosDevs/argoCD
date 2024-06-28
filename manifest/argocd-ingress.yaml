@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: holamundo-nginx-ingress
+  name: holamundo-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
