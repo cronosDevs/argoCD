@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: holamundo-nginx
+  labels:
+    app: holamundo-nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: holamundo-nginx
+  template:
+    metadata:
+      labels:
+        app: holamundo-nginx
+    spec:
+      containers:
+      - name: nginx
+        image: tu_usuario/holamundo-nginx:latest
+        ports:
+        - containerPort: 80
