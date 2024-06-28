@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: helloworld
 spec:
-  selector:
-    app: helloworld
+  type: NodePort
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
-  type: ClusterIP
+    - port: 80
+      targetPort: 80
+      nodePort: 30000
+  selector:
+    app.kubernetes.io/name: ingress-nginx
