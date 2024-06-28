@@ -6,7 +6,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: holamundo.yourdomain.com
+  - host: 
     http:
       paths:
       - path: /helloworld
