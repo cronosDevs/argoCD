@@ -6,10 +6,10 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: holamundo.yourdomain.com
+  - host: https://localhost:8080
     http:
       paths:
-      - path: /
+      - path: /helloworld
         pathType: Prefix
         backend:
           service:
